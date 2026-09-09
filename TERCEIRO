@@ -67,3 +67,5 @@ int main() {
         printf("Nao estao em ordem crescente nem decrescente.\n");
     }
 }
+
+*corrigi com GPT*
