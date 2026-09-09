@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main() {
+    int saque;
+    int n200;
+    int n100;
+    int n50;
+    int n20;
+    int n10;
+    int n5;
+    int total;
+
+    printf("Digite o valor do saque: ");
+    scanf("%d", &saque);
+
+    if (saque <= 0) {
+        printf("Valor invalido.\n");
+    }
+    else if (saque % 5 != 0) {
+        printf("Nao e possivel realizar o saque.\n");
+    }
+    else {
+        n200 = saque / 200;
+        saque = saque % 200;
+
+        n100 = saque / 100;
+        saque = saque % 100;
+
+        n50 = saque / 50;
+        saque = saque % 50;
+
+        n20 = saque / 20;
+        saque = saque % 20;
+
+        n10 = saque / 10;
+        saque = saque % 10;
+
+        n5 = saque / 5;
+        saque = saque % 5;
+
+        if (saque != 0) {
+            printf("Nao e possivel realizar o saque.\n");
+        }
+        else {
+            printf("Notas de 200: %d\n", n200);
+            printf("Notas de 100: %d\n", n100);
+            printf("Notas de 50: %d\n", n50);
+            printf("Notas de 20: %d\n", n20);
+            printf("Notas de 10: %d\n", n10);
+            printf("Notas de 5: %d\n", n5);
+
+            total = n200 + n100 + n50 + n20 + n10 + n5;
+            printf("Quantidade total de cedulas: %d\n", total);
+        }
+    }
+}
